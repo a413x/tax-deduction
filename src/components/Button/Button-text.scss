@@ -1,0 +1,9 @@
+.button_text{
+  border: none;
+  padding: 0;
+  color: $red;
+  background: transparent;
+}
+.button_text:hover{
+  color: $orange;
+}
