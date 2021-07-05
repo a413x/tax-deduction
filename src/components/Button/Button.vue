@@ -23,9 +23,9 @@
   border: none;
   cursor: auto;
 }
-@import '@/components/Button/Button-text.scss';
-@import '@/components/Button/Button-big.scss';
-@import '@/components/Button/Button-small.scss';
-@import '@/components/Button/Button-fill-red.scss';
-@import '@/components/Button/Button-stroke-white.scss';
+@import '@/components/Button/Button_text.scss';
+@import '@/components/Button/Button_big.scss';
+@import '@/components/Button/Button_small.scss';
+@import '@/components/Button/Button_fill-red.scss';
+@import '@/components/Button/Button_stroke-white.scss';
 </style>
