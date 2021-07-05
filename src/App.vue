@@ -1,11 +1,14 @@
 <template>
   <div id="app">
+    <Button class="button_big button_stroke-white">Налоговый вычет</Button>
   </div>
 </template>
 
 <script>
+import Button from '@/components/Button/Button.vue'
 export default {
-  name: 'app'
+  name: 'app',
+  components: { Button }
 }
 </script>
 
