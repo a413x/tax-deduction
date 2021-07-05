@@ -1,14 +1,32 @@
 <template>
   <div id="app">
-    <Button class="button_big button_stroke-white">Налоговый вычет</Button>
+    <Button class="button_big button_stroke-white" @click="btnShowClick">
+      Налоговый вычет
+    </Button>
+    <Popup :show="showPopup" @close="closePopup">
+    </Popup>
   </div>
 </template>
 
 <script>
 import Button from '@/components/Button/Button.vue'
+import Popup from '@/components/Popup/Popup.vue'
 export default {
   name: 'app',
-  components: { Button }
+  data(){
+    return {
+      showPopup: false
+    }
+  },
+  components: { Button, Popup },
+  methods: {
+    btnShowClick(){
+      this.showPopup = true
+    },
+    closePopup(){
+      this.showPopup = false
+    }
+  }
 }
 </script>
 
