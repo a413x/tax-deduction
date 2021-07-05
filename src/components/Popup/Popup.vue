@@ -27,9 +27,7 @@ export default {
     background: white;
   }
   .popup__container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flex-center;
     position: absolute;
     top: 0;
     left: 0;
