@@ -2,7 +2,7 @@
   background: transparent;
   border: 1px solid white;
 }
-.button_stroke-white:hover{
+.button_stroke-white:hover, .button_stroke-white:active{
   background: white;
   color: black;
 }

@@ -1,7 +1,8 @@
 .button_fill-red{
+  box-shadow: $button-shadow;
   background: $gradient-red;
   border: none;
 }
-.button_fill-red:hover{
+.button_fill-red:hover, .button_fill-red:active{
   background: $red;
 }
