@@ -8,6 +8,8 @@
       :disabled="disabled"
       :class="{'input_error': !valid}"
       @input="$emit('input', $event)"
+      @focus="$emit('focus', $event)"
+      @blur="$emit('blur', $event)"
     />
     <div class="input__error" v-if="!valid">
       Поле обязательно для заполнения
