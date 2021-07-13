@@ -3,7 +3,8 @@
     <Button class="button_big button_stroke-white" @click="btnShowClick">
       Налоговый вычет
     </Button>
-    <Popup :show="showPopup" @close="closePopup">
+    <Popup :show="showPopup" @close="closePopup" class="app__popup">
+      <TaxDeduction />
     </Popup>
   </div>
 </template>
@@ -11,6 +12,7 @@
 <script>
 import Button from '@/components/Button/Button.vue'
 import Popup from '@/components/Popup/Popup.vue'
+import TaxDeduction from '@/components/TaxDeduction/TaxDeduction.vue'
 export default {
   name: 'app',
   data(){
@@ -18,7 +20,7 @@ export default {
       showPopup: false
     }
   },
-  components: { Button, Popup },
+  components: { Button, Popup, TaxDeduction },
   methods: {
     btnShowClick(){
       this.showPopup = true
