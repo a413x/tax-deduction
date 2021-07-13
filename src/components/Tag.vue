@@ -25,10 +25,10 @@ export default {
   border: none;
   color: white;
   cursor: pointer;
-}
-.tag:hover{
-  background: #DFE3E6;
-  color: black;
+  &:hover{
+    background: $gray800;
+    color: black;
+  }
 }
 .tag_not-active{
   background: #EEF0F2;

@@ -39,7 +39,7 @@ export default {
   margin-top: 8px;
   & hr{
     border: none;
-    border-top: 1px solid #DFE3E6;
+    border-top: 1px solid $gray800;
   }
 }
 .tax-deduction__checkbox-group-title{

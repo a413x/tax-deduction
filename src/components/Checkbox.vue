@@ -31,7 +31,7 @@ export default{
     border: none;
   }
   &:disabled ~ .checkbox__input{
-    background: $gray;
+    background: $gray900;
     border: none;
     cursor: auto;
   }
@@ -40,7 +40,7 @@ export default{
   @include flex-center;
   width: 20px;
   height: 20px;
-  border: 1px solid #DFE3E6;
+  border: 1px solid $gray800;
   box-sizing: border-box;
   border-radius: 6px;
   cursor: pointer;

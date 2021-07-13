@@ -43,6 +43,8 @@ export default {
   @include flex-center;
   font-family: Lab Grotesque;
   font-style: normal;
+  font-size: 14px;
+  line-height: 24px;
   background: $gradient-red;
   box-shadow: 0px -0.11px 16.9495px rgba(183, 187, 225, 0.33);
   border-radius: 0px;

@@ -16,12 +16,12 @@
   cursor: pointer;
   border-radius: 6px;
   color: white;
-}
-.button:disabled, .button:disabled:hover{
-  background: $gray;
-  color: white;
-  border: none;
-  cursor: auto;
+  &:disabled, &:disabled:hover{
+    background: $gray900;
+    color: white;
+    border: none;
+    cursor: auto;
+  }
 }
 @import '@/components/Button/Button_text.scss';
 @import '@/components/Button/Button_big.scss';
