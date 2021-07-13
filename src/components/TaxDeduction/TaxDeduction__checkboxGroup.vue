@@ -37,9 +37,17 @@ export default {
 <style lang="scss" scoped>
 .tax-deduction__checkbox-group{
   margin-top: 8px;
+  max-height: 264px;
+  overflow-y: scroll;
   & hr{
     border: none;
     border-top: 1px solid $gray800;
+  }
+  &::-webkit-scrollbar{
+    width: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
   }
 }
 .tax-deduction__checkbox-group-title{
