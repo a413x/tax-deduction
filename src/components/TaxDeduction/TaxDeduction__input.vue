@@ -14,9 +14,7 @@
 import Input from '../Input.vue'
 const addition = ' ₽'
 export default {
-  data(){
-    return { valid: true }
-  },
+  props: { valid: Boolean },
   components: { Input },
   methods: {
     inputChange(e){
@@ -24,9 +22,8 @@ export default {
       const pos = e.target.selectionStart
       if(! new RegExp(/^\d+$/).test(val) || val <= 0){
         e.target.value = val.substring(0,pos-1) + val.substring(pos, val.length)
-        return
       }
-      this.valid = true
+      this.$emit('inputChange', e.target.value)
     },
     inputFocus(e){
       const val = e.target.value
@@ -37,11 +34,7 @@ export default {
     },
     inputBlur(e){
       const val = e.target.value
-      if(val === '') {
-        this.valid = false
-        return
-      }
-      e.target.value = val + addition
+      if(val !== '') e.target.value = val + addition
     }
   }
 }
