@@ -12,6 +12,7 @@
 
 <script>
 import Input from '../Input.vue'
+import {formatNumber} from '../../utils/utils.js'
 const addition = ' ₽'
 export default {
   props: { valid: Boolean },
@@ -29,12 +30,12 @@ export default {
       const val = e.target.value
       if(val === '') return
       if(val.includes(addition)) {
-        e.target.value = val.slice(0, -addition.length)
+        e.target.value = val.slice(0, -addition.length).replace(/\s/g, '');
       }
     },
     inputBlur(e){
       const val = e.target.value
-      if(val !== '') e.target.value = val + addition
+      if(val !== '') e.target.value = formatNumber(val) + addition
     }
   }
 }
