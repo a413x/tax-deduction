@@ -1,9 +1,11 @@
 <template>
   <div class="popup" v-if="show">
-    <div class="popup__container">
-      <div class="popup__inner">
-        <CloseButton class="popup__close-button" @close="$emit('close')"/>
-        <slot></slot>
+    <div class="popup__background">
+      <div class="popup__container">
+        <div class="popup__inner">
+          <CloseButton class="popup__close-button" @close="$emit('close')"/>
+          <slot></slot>
+        </div>
       </div>
     </div>
   </div>
