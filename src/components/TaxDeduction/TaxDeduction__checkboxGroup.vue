@@ -3,16 +3,18 @@
     <div class="tax-deduction__checkbox-group-title">
       Итого можете внести в качестве досрочных:
     </div>
-    <div
-      v-for="(option, i) in options"
-      :key="option.id"
-    >
-      <div class="tax-deduction__checkbox-container">
-        <Checkbox class="tax-deduction__checkbox" />
-        <span class="tax-deduction__amount">{{getAmount(option, i+1)}}</span>
-        <span class="tax-deduction__per-year">{{getPerYear(option, i+1)}}</span>
+    <div class="tax-deduction__checkbox-group-options">
+      <div
+        v-for="(option, i) in options"
+        :key="option.id"
+      >
+        <div class="tax-deduction__checkbox-container">
+          <Checkbox class="tax-deduction__checkbox" />
+          <span class="tax-deduction__amount">{{getAmount(option, i+1)}}</span>
+          <span class="tax-deduction__per-year">{{getPerYear(option, i+1)}}</span>
+        </div>
+        <hr>
       </div>
-      <hr>
     </div>
   </div>
 </template>
@@ -37,12 +39,15 @@ export default {
 <style lang="scss" scoped>
 .tax-deduction__checkbox-group{
   margin-top: 8px;
-  max-height: 264px;
-  overflow-y: scroll;
   & hr{
+    margin: 0;
     border: none;
     border-top: 1px solid $gray800;
   }
+}
+.tax-deduction__checkbox-group-options{
+  max-height: 228px;
+  overflow-y: scroll;
   &::-webkit-scrollbar{
     width: 5px;
   }
