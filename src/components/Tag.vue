@@ -25,13 +25,17 @@ export default {
   border: none;
   color: white;
   cursor: pointer;
-  &:hover{
-    background: $gray800;
-    color: black;
+  &:active{
+    background: $gradient-red;
+    color: white;
   }
 }
 .tag_not-active{
   background: #EEF0F2;
   color: black;
+  &:hover{
+    background: $gray800;
+    color: black;
+  }
 }
 </style>

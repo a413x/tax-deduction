@@ -30,7 +30,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.tag-group__tag{
-  margin-left: 16px;
+.tag-group__tag:not(:last-child){
+  margin-right: 16px;
 }
 </style>
