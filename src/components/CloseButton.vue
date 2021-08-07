@@ -10,5 +10,15 @@
   height: 40px;
   @include flex-center;
   cursor: pointer;
+  @include media('max', 'sm'){
+    width: 24px;
+    height: 24px;
+  }
+}
+.close-button img{
+  @include media('max', 'sm'){
+    width: 12px;
+    height: 12px;
+  }
 }
 </style>

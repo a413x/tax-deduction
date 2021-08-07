@@ -1,5 +1,8 @@
-.button_small{
+@mixin button_small_mixin {
   padding: 12px 24px;
   font-size: 12px;
   line-height: 16px;
+}
+.button_small{
+  @include button_small_mixin;
 }

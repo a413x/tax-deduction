@@ -8,7 +8,7 @@
     </Button>
     <TaxDeduction__checkboxGroup :options="options" v-if="showOptions"/>
     <div class="tax-deduction__choice">
-      Что уменьшаем?
+      <div>Что уменьшаем?</div>
       <TagGroup
         :tags="tags"
         class="tax-deduction__tag-group"
@@ -66,19 +66,39 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import '@/components/Button/button_small.scss';
+.tax-deduction{
+  @include media('max', 'sm'){
+    display: flex;
+    flex-flow: column;
+    height: 100%;
+  }
+}
 .tax-deduction__calculate{
-  margin: 8px 0px 8px 0px;
+  margin: 8px auto 8px 0;
 }
 .tax-deduction__choice{
+  display: flex;
+  align-items: center;
   margin-top: 16px;
   font-weight: 500;
-  display: flex;
+  @include media('max', 'sm'){
+    display: block;
+    margin-bottom: auto;
+  }
 }
 .tax-deduction__tag-group{
-  margin-left: 16px;
+  margin-left: 32px;
+  @include media('max', 'sm'){
+    margin-left: 0;
+    margin-top: 24px;
+  }
 }
 .tax-deduction__button-add{
   width: 100%;
   margin-top: 40px;
+  @include media('max', 'sm'){
+    @include button_small_mixin;
+  }
 }
 </style>

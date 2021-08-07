@@ -49,4 +49,14 @@ export default {
   box-shadow: 0px -0.11px 16.9495px rgba(183, 187, 225, 0.33);
   border-radius: 0px;
 }
+.app__popup .popup__container{
+  width: 552px;
+  @include media('max', 'md'){
+    width: 453px;
+  }
+  @include media('max', 'sm'){
+    width: 100%;
+    height: 100%;
+  }
+}
 </style>

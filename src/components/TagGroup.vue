@@ -32,5 +32,8 @@ export default {
 <style lang="scss" scoped>
 .tag-group__tag:not(:last-child){
   margin-right: 16px;
+  @include media('max', 'sm'){
+    margin-right: 8px;
+  }
 }
 </style>

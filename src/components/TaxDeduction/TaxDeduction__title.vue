@@ -8,5 +8,9 @@
   font-weight: 500;
   font-size: 28px;
   line-height: 40px;
+  @include media('max', 'sm'){
+    font-size: 18px;
+    line-height: 24px;
+  }
 }
 </style>
