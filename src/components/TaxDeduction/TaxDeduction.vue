@@ -2,7 +2,7 @@
   <div class="tax-deduction">
     <TaxDeduction__title />
     <TaxDeduction__info />
-    <TaxDeduction__input :valid="valid" @inputChange="inputChange"/>
+    <TaxDeduction__input :valid="valid" @inputChange="inputChange" @enter="calculate"/>
     <Button class="tax-deduction__calculate button_text" @click="calculate">
       Рассчитать
     </Button>

@@ -7,6 +7,7 @@
     @input="inputChange"
     @focus="inputFocus"
     @blur="inputBlur"
+    @on-enter="$emit('enter')"
   />
 </template>
 

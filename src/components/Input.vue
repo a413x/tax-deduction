@@ -10,6 +10,7 @@
       @input="$emit('input', $event)"
       @focus="$emit('focus', $event)"
       @blur="$emit('blur', $event)"
+      @keyup.enter="$emit('on-enter')"
     />
     <div class="input__error-msg" v-if="!valid">
       Поле обязательно для заполнения
